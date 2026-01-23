@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>#2 Template Basic</title>
+  </head>
+  <body>
+    <h1>blog filter page</h1>
+    <! -- This is a 1st comment-->
+    {% comment %} This is 2nd comment {% endcomment %} {#this is 3rd comment#}
+    Title (normal):{{post.title}}
+    <br />
+    uppercase : {{post.title|upper}}
+    <br />
+    lowercase : {{post.title|lower}}
+    <br />
+    capital : {{post.title|capfirst}}
+    <br />
+    Title case : {{post.title|title}}
+    <br />
+    TruncateChar : {{post.title|truncatechars:20}}
+    <br />
+    truncatewords : {{post.title|truncatewords:2}}
+    <br />
+    LineBrack : {{post.title|linebreaks}}
+    <hr>
+
+    <br />
+    original price: {{post.price}}
+    <br />
+    original price(+5): {{post.price|add:5}} original price: {{post.price}}
+    <br>
+    {% if post.number|divisibleby:2%}
+    {{post.number}}  is Even
+    {% else %}
+    {{post.number}}  is Odd
+    {% endif %}
+
+    <hr>
+
+    Tags : {{post.tags}}
+    <br>
+    First Tags : {{post.tags|first}}
+    <br>
+    Last Tags : {{post.tags|last}}
+    <br>
+    Total Tags : {{post.tags|length}}
+    <br>
+    Slice Tags(first 2) : {{post.tags|slice:":2"}}
+    <br>
+    join Tags : {{post.tags|join:","}}
+
+    <hr>
+
+    Author Available ? :{{post.author|yesno:"Yes,No,Maybe"}}
+    <br>
+    Comments Counts?:{{post.comment_count}} Comment{{post.comment_count|pluralize}}
+   
+    <hr>
+
+    Created_at:{{post.created_at}}
+    <br>
+    Formated date:{{post.created_at|date:"D d M Y"}}
+    <br>
+    Time Only:{{post.created_at|time:"H:i"}}
+    <br>
+    Title Encode:{{post.title|urlencode}}
+    <br>
+    Float Formate Example:{{123.4567778|floatformat:3}}
+
+   </body>
+</html>

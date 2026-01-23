@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>#1 Template Basic</title>
+  </head>
+  <body>
+    <h1>Template Basic</h1>
+    <! -- This is a 1st comment-->
+    {% comment %} This is 2nd comment {% endcomment %}
+    {#this is 3rd comment#}
+
+    <p>this is simple teplates rot demonstarate basic html structures </p>
+    <p> Welcome to th eblog name page</p>
+    
+    
+    Name:{{name}}
+    <br>
+    Age:{{age}}
+    <br>
+    First Skill: {{skill.0}}
+    <br>
+    Full list: {{skill}}
+    <br>
+    User Name : {{user.name}}
+    <br>
+    User Age : {{user.age}}
+    <br>
+    <h3>Blog Information </h3>
+    <br>
+    Title = {{blog.title}}
+    <br>
+    content = {{ blog.content|safe}}
+    <br>
+    Create_at = {{blog.created_at}}
+    <br>
+    Default Empty Value: {{empty_value|default:"No value provided"}}
+    <br>
+    Default Empty Value: {{empty_value|default_if_none:"No Data"}}
+    <br>
+    content = {{ blog.author.name}}
+  </body>  
+</html>  
