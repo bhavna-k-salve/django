@@ -1,0 +1,19 @@
+{% load django_bootstrap5 %}
+<html>
+  <head>
+    <title>{% block title %} templates {%endblock%}  </title>
+    
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock %}
+  </head>
+  <body>
+   
+    <div class="content">{% block content%} <h1> My new one  page </h1> {% endblock %} </div>
+    
+  </body>
+</html>  
+

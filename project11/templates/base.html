@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>{% block title %} templates {%endblock%}  </title>
+    {% load static %}
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+  </head>
+  <body>
+   
+    <div class="content">{% block content%} <h1> My page </h1> {% endblock %} </div>
+    
+  </body>
+</html>  
+  
